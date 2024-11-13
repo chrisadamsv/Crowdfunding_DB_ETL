@@ -36,7 +36,15 @@ CREATE TABLE Campaigns (
     launched_date DATE,
     end_date DATE,
     category_id VARCHAR NOT NULL,
+	CHECK (category_id LIKE 'cat%'),
 	FOREIGN KEY (category_id) REFERENCES Categories (category_id),
     subcategory_id VARCHAR NOT NULL,
+	CHECK (subcategory_id LIKE 'subcat%'),
 	FOREIGN KEY (subcategory_id) REFERENCES Subcategories (subcategory_id)
 );
+
+-- Select tables individually to ensure creation.
+SELECT * FROM Contacts;
+SELECT * FROM Categories;
+SELECT * FROM Subcategories;
+SELECT * FROM Campaigns;
