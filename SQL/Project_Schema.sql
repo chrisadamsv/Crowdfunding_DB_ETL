@@ -1,3 +1,4 @@
+-- Create a table to store the Contacts data.
 CREATE TABLE Contacts (
     contact_id INT PRIMARY KEY,
     first_name VARCHAR NOT NULL,
@@ -5,16 +6,21 @@ CREATE TABLE Contacts (
     email VARCHAR NOT NULL
 );
 
+-- Create a table to store the Categories data.
 CREATE TABLE Categories (
     category_id VARCHAR PRIMARY KEY,
     category VARCHAR NOT NULL
+	CHECK (category_id LIKE 'cat%')
 );
 
+-- Create a table to store the Subcategories data.
 CREATE TABLE Subcategories (
     subcategory_id VARCHAR PRIMARY KEY,
     subcategory VARCHAR NOT NULL
+	CHECK (subcategory_id LIKE 'subcat%')
 );
 
+-- Create a table to store the Campaigns data.
 CREATE TABLE Campaigns (
     cf_id INT PRIMARY KEY,
     contact_id INT NOT NULL,
@@ -25,8 +31,8 @@ CREATE TABLE Campaigns (
     pledged DECIMAL(10,2),
     outcome VARCHAR  NOT NULL,
     backers_count INT,
-    country VARCHAR NOT NULL,
-    currency VARCHAR NOT NULL,
+    country VARCHAR(2) NOT NULL,
+    currency VARCHAR(3) NOT NULL,
     launched_date DATE,
     end_date DATE,
     category_id VARCHAR NOT NULL,
