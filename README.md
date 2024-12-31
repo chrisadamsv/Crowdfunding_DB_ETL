@@ -1,5 +1,4 @@
-# Crowdfunding_ETL
-For use with Project 2 due 11.14
+# Crowdfunding_DB_ETL
 
 Project Owners:
   - Christopher Adams
@@ -28,3 +27,4 @@ Once the tables were generated in Postgres, the tables were queried to ensure cr
 <img width="1627" alt="campaigns_table" src="https://github.com/user-attachments/assets/bdf8a0ad-13f6-48c3-98a5-a51814573f68">
 
 
+* Part of this code is sourced from EdX Data Analytics Bootcamp source material
